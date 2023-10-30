@@ -63,7 +63,6 @@ const LoginForm = ({ setUser, notify, isDarkMode }) => {
         Login to your account
       </Header>
       <Form
-        onSubmit={handleLogin}
         className={isDarkMode ? 'dark-mode-auth-form auth-form' : 'auth-form'}
       >
         <Form.Input
@@ -96,11 +95,12 @@ const LoginForm = ({ setUser, notify, isDarkMode }) => {
         />
 
         <Button
+          onClick={handleLogin}
           animated="vertical"
           color="teal"
           icon
           labelPosition="left"
-          type="submit"
+          // type="submit"
           floated="right"
           loading={isLoading}
           size={isMobile ? 'small' : 'large'}
